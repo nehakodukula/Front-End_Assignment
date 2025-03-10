@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter and Setter Counter</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #getterSetterCounter {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Getter and Setter Counter</h1>
+
+    <div id="getterSetterCounter">Counter: 0</div>
+    <button id="getterSetterIncrement">Increment</button>
+
+    <script>
+      let _counterValue = 0;
+      const getterSetterCounterElement = document.getElementById(
+        "getterSetterCounter"
+      );
+
+      const counterObj = {
+        get value() {
+          return _counterValue;
+        },
+        set value(val) {
+          _counterValue = val;
+          getterSetterCounterElement.textContent = "Counter: " + _counterValue;
+        },
+      };
+
+      document
+        .getElementById("getterSetterIncrement")
+        .addEventListener("click", function () {
+          counterObj.value++;
+        });
+    </script>
+  </body>
+</html>

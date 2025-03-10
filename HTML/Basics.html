@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics of HTML</title>
+    <style>
+      /* Basic styling for demonstration */
+      section {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      a:hover {
+        color: red;
+      }
+      p::first-letter {
+        font-size: 150%;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="top">
+      <h1>My First Heading</h1>
+      <p>This is a <em>paragraph</em> with <strong>bold text</strong>.</p>
+      <a href="https://www.example.com">Visit Example.com</a>
+      <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+      </ul>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <blockquote>This is a blockquote.</blockquote>
+      <hr />
+      <img src="placeholder-image.jpg" alt="Placeholder" width="200" />
+      <div style="background-color: lightblue">This is a div.</div>
+      <p>This is a <span>span</span> inside a paragraph.</p>
+      <a href="#section2">Go to Section 2</a>
+    </section>
+
+    <section id="section2">
+      <h2>Section 2</h2>
+      <p>Another paragraph in Section 2.</p>
+      <a href="#top">Go to Top</a>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Tasks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #daedee;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      h2 {
+        color: #333;
+      }
+      button {
+        padding: 12px 20px;
+        border: none;
+        background-color: #4384f3;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #034489;
+      }
+      input {
+        padding: 10px;
+        width: 80%;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      p {
+        font-size: 16px;
+        color: #333;
+      }
+      #error {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Event Listener for Button Click -->
+    <div class="container">
+      <h2>1. Show Current Date & Time</h2>
+      <button id="showDateTime">Show Date & Time</button>
+      <p id="dateTime"></p>
+    </div>
+
+    <!-- 2. JavaScript Form Validation -->
+    <div class="container">
+      <h2>2. Form Validation</h2>
+      <input type="text" id="textInput" placeholder="Enter text" />
+      <button onclick="validateInput()">Submit</button>
+      <p id="error"></p>
+    </div>
+
+    <!-- 3. Console Log Debugging -->
+    <div class="container">
+      <h2>3. Debugging with Console</h2>
+      <button onclick="debugExample()">Run Debugging</button>
+      <p>Check console (F12 → Console) for output.</p>
+    </div>
+
+    <!-- 4. Set, Get & Check Cookies -->
+    <div class="container">
+      <h2>4. Cookies Handling</h2>
+      <button onclick="setCookie('username', 'JohnDoe', 1)">Set Cookie</button>
+      <button onclick="alert(getCookie('username'))">Get Cookie</button>
+      <button onclick="checkCookie()">Check Cookie</button>
+      <p id="cookieMessage"></p>
+    </div>
+
+    <!-- 5. JSON Object Access -->
+    <div class="container">
+      <h2>5. JSON Object Example</h2>
+      <button onclick="showJsonData()">Show JSON Data</button>
+      <p id="jsonOutput"></p>
+    </div>
+
+    <script>
+      // Task 1: Event Listener for Button Click
+      document
+        .getElementById("showDateTime")
+        .addEventListener("click", function () {
+          document.getElementById("dateTime").innerText =
+            "Current Date & Time: " + new Date();
+        });
+
+      // Task 2: JavaScript Form Validation
+      function validateInput() {
+        let input = document.getElementById("textInput").value;
+        let error = document.getElementById("error");
+
+        if (input.trim() === "") {
+          error.innerText = "Field cannot be empty!";
+        } else {
+          error.innerText = "";
+          alert("Form submitted successfully!");
+        }
+      }
+
+      // Task 3: Console.log Debugging
+      function debugExample() {
+        let numbers = [1, 2, 3, 4, 5];
+        console.log("Original Array:", numbers);
+
+        let squaredNumbers = numbers.map((num) => num * num);
+        console.log("Squared Array:", squaredNumbers);
+      }
+
+      // Task 4: Set, Get & Check Cookies
+      function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie =
+          name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
+      }
+
+      function getCookie(name) {
+        let decodedCookies = decodeURIComponent(document.cookie);
+        let cookiesArray = decodedCookies.split(";");
+
+        for (let cookie of cookiesArray) {
+          let [key, value] = cookie.trim().split("=");
+          if (key === name) return value;
+        }
+        return "";
+      }
+
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user !== "") {
+          document.getElementById("cookieMessage").innerText =
+            "Welcome back, " + user;
+        } else {
+          document.getElementById("cookieMessage").innerText =
+            "No cookie found!";
+        }
+      }
+
+      // Task 5: JSON Object Access
+      function showJsonData() {
+        let person = {
+          name: "John Doe",
+          age: 25,
+          city: "New York",
+        };
+
+        document.getElementById(
+          "jsonOutput"
+        ).innerText = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Object Example</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px;
+        background-color: purple;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: darkpurple;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JSON Object Example</h2>
+    <button onclick="showJsonData()">Show JSON Data</button>
+    <p id="jsonOutput"></p>
+
+    <script>
+      function showJsonData() {
+        let person = {
+          name: "John Doe",
+          age: 25,
+          city: "New York",
+        };
+
+        document.getElementById(
+          "jsonOutput"
+        ).innerText = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+      }
+    </script>
+  </body>
+</html>

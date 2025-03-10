@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Attributes</title>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <h2>1. Basic Input Types</h2>
+      <label for="textInput">Text:</label>
+      <input type="text" id="textInput" name="textInput" /><br /><br />
+
+      <label for="passwordInput">Password:</label>
+      <input
+        type="password"
+        id="passwordInput"
+        name="passwordInput"
+      /><br /><br />
+
+      <label for="radio1">Radio 1:</label>
+      <input type="radio" id="radio1" name="radioGroup" value="radio1" />
+      <label for="radio2">Radio 2:</label>
+      <input
+        type="radio"
+        id="radio2"
+        name="radioGroup"
+        value="radio2"
+      /><br /><br />
+
+      <label for="checkbox1">Checkbox 1:</label>
+      <input type="checkbox" id="checkbox1" name="checkbox1" value="checked" />
+      <label for="checkbox2">Checkbox 2:</label>
+      <input
+        type="checkbox"
+        id="checkbox2"
+        name="checkbox2"
+        value="checked"
+      /><br /><br />
+
+      <button type="button">Button</button>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" /><br /><br />
+
+      <h2>2. HTML5 Input Types</h2>
+      <label for="numberInput">Number:</label>
+      <input type="number" id="numberInput" name="numberInput" /><br /><br />
+
+      <label for="rangeInput">Range:</label>
+      <input type="range" id="rangeInput" name="rangeInput" /><br /><br />
+
+      <label for="colorInput">Color:</label>
+      <input type="color" id="colorInput" name="colorInput" /><br /><br />
+
+      <label for="dateInput">Date:</label>
+      <input type="date" id="dateInput" name="dateInput" /><br /><br />
+
+      <label for="fileInput">File:</label>
+      <input type="file" id="fileInput" name="fileInput" /><br /><br />
+
+      <label for="timeInput">Time:</label>
+      <input type="time" id="timeInput" name="timeInput" /><br /><br />
+
+      <label for="monthInput">Month:</label>
+      <input type="month" id="monthInput" name="monthInput" /><br /><br />
+
+      <label for="weekInput">Week:</label>
+      <input type="week" id="weekInput" name="weekInput" /><br /><br />
+
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" name="emailInput" /><br /><br />
+
+      <h2>3. Input Restrictions</h2>
+      <label for="disabledInput">Disabled:</label>
+      <input
+        type="text"
+        id="disabledInput"
+        name="disabledInput"
+        disabled
+        value="I am disabled"
+      /><br /><br />
+
+      <label for="maxInput">Max (10):</label>
+      <input type="number" id="maxInput" name="maxInput" max="10" /><br /><br />
+
+      <label for="maxLengthInput">Max Length (5):</label>
+      <input
+        type="text"
+        id="maxLengthInput"
+        name="maxLengthInput"
+        maxlength="5"
+      /><br /><br />
+
+      <label for="minInput">Min (5):</label>
+      <input type="number" id="minInput" name="minInput" min="5" /><br /><br />
+
+      <label for="readonlyInput">Readonly:</label>
+      <input
+        type="text"
+        id="readonlyInput"
+        name="readonlyInput"
+        readonly
+        value="I am readonly"
+      /><br /><br />
+
+      <label for="requiredInput">Required:</label>
+      <input
+        type="text"
+        id="requiredInput"
+        name="requiredInput"
+        required
+      /><br /><br />
+
+      <label for="sizeInput">Size (30):</label>
+      <input
+        type="text"
+        id="sizeInput"
+        name="sizeInput"
+        size="30"
+      /><br /><br />
+
+      <label for="valueInput">Value:</label>
+      <input
+        type="text"
+        id="valueInput"
+        name="valueInput"
+        value="Initial Value"
+      /><br /><br />
+
+      <h2>4. Target Attribute</h2>
+      <a href="https://www.example.com" target="_blank">Open in New Tab</a
+      ><br /><br />
+      <a href="https://www.example.com" target="_self">Open in Same Tab</a
+      ><br /><br />
+
+      <h2>5. I-frames and Marquee</h2>
+      <iframe
+        src="https://www.example.com"
+        width="400"
+        height="300"
+        title="Example Website"
+      ></iframe
+      ><br /><br />
+      <!-- Although the marquee tag is deprecated in HTML5, we should use CSS animation or the javaScript libraries to achieve the effect -->
+      <marquee behavior="scroll" direction="left"
+        >Scrolling Text Example</marquee
+      >
+    </form>
+  </body>
+</html>

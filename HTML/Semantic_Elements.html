@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Elements</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header,
+      footer {
+        background-color: #120245;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+        overflow: hidden;
+      }
+
+      nav li {
+        float: left;
+      }
+
+      nav li a {
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav li a:hover {
+        background-color: #bbb;
+      }
+
+      article,
+      aside,
+      section {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      figure {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      figcaption {
+        font-style: italic;
+        color: #666;
+      }
+
+      mark {
+        background-color: yellow;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .time-stamp {
+        font-size: 0.8em;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Semantic HTML5 Showcase</h1>
+    </header>
+
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#non-semantic">Non-Semantic</a></li>
+        <li><a href="#semantic">Semantic</a></li>
+        <li><a href="#html5-tags">HTML5 Tags</a></li>
+      </ul>
+    </nav>
+
+    <section id="non-semantic">
+      <h2>1. Non-Semantic Elements (div & span)</h2>
+      <div style="background-color: #eee; padding: 10px; margin-bottom: 10px">
+        This is a <span style="color: blue">non-semantic</span> div example.
+      </div>
+      <p>
+        A <span style="font-weight: bold">span</span> is used for inline
+        elements.
+      </p>
+    </section>
+
+    <section id="semantic">
+      <h2>2. Semantic Elements (form, table, article)</h2>
+
+      <article>
+        <h3>Article Example</h3>
+        <p>This is an article with some content.</p>
+      </article>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="html5-tags">
+      <h2>3. HTML5 Tags</h2>
+
+      <article>
+        <header>
+          <h2>Article Title</h2>
+          <p class="time-stamp">
+            Published: <time datetime="2024-01-01">January 1, 2024</time>
+          </p>
+        </header>
+        <p>This article uses <mark>HTML5</mark> semantic tags.</p>
+        <figure>
+          <img src="placeholder.jpg" alt="Placeholder" width="300" />
+          <figcaption>A sample image.</figcaption>
+        </figure>
+        <section>
+          <h3>Section within Article</h3>
+          <p>Content of the section.</p>
+        </section>
+        <aside>
+          <h4>Related Info</h4>
+          <p>Additional information.</p>
+        </aside>
+        <footer>
+          <p>Article Footer</p>
+        </footer>
+      </article>
+
+      <nav aria-label="Navigation">
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Semantic HTML5 Showcase</p>
+    </footer>
+  </body>
+</html>

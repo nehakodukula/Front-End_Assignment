@@ -1,0 +1,135 @@
+body {
+  font-family: sans-serif;
+  font-style: oblique;
+  color: #040346;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* 1. Table Layout */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-none {
+  table-layout: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+
+/* 2. List Style Type */
+.list-styled {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* 3. CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgb(212, 203, 243);
+}
+
+.item1 {
+  background-color: #e6f7ff;
+}
+.item2 {
+  background-color: #ffe6f7;
+}
+.item3 {
+  background-color: #f7ffe6;
+}
+.item4 {
+  background-color: #e6ffe6;
+}
+.item5 {
+  background-color: #ffe6e6;
+}
+
+/* 4. Hero Image */
+.hero-image {
+  background-image: url("assets/images.jfif");
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.263);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-text button {
+  background-color: #049b09;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 5. Viewport and Media Queries */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.res-item {
+  background-color: #d4e8ee;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgb(156, 214, 243);
+  border-radius: 5px;
+}
+
+.responsive-img,
+.responsive-video {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}

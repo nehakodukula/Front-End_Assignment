@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call and Apply Demo</title>
+  </head>
+  <body>
+    <h1>Call and Apply Demo</h1>
+
+    <button id="callApplyButton">Call/Apply Demo</button>
+
+    <script>
+      function greet(greeting, punctuation) {
+        console.log(greeting + ", " + this.name + punctuation);
+      }
+
+      const person = { name: "Alice" };
+
+      document
+        .getElementById("callApplyButton")
+        .addEventListener("click", function () {
+          greet.call(person, "Hello", "!"); // Call with individual arguments
+          greet.apply(person, ["Hi", "."]); // Apply with an array of arguments
+          alert("Check console for call/apply output.");
+        });
+    </script>
+  </body>
+</html>

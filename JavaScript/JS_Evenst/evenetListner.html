@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener Example</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-top: 50px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: rgb(123, 123, 174);
+        color: white;
+        border: 1px solid rgb(75, 75, 213);
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(69, 69, 225);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Show Current Date & Time</h2>
+    <button id="showDateTime">Click Me</button>
+    <p id="dateTime"></p>
+
+    <script>
+      document
+        .getElementById("showDateTime")
+        .addEventListener("click", function () {
+          document.getElementById("dateTime").innerText = new Date();
+        });
+    </script>
+  </body>
+</html>

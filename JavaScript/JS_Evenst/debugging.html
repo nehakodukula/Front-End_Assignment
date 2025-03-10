@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console Debugging</title>
+  </head>
+  <body>
+    <h2>Console Debugging</h2>
+    <p>Check the console (F12 → Console) for output.</p>
+
+    <script>
+      function debugExample() {
+        let numbers = [1, 2, 3, 4, 5];
+        console.log("Original Array:", numbers);
+
+        let squaredNumbers = numbers.map((num) => num * num);
+        console.log("Squared Array:", squaredNumbers);
+      }
+      debugExample();
+    </script>
+  </body>
+</html>

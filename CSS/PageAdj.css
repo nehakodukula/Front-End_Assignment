@@ -1,0 +1,93 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  scroll-behavior: smooth;
+}
+
+/* Task 1: Table Styling */
+.table-section table {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.table-section th,
+.table-section td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Change Background Color on Hover */
+.table-section:hover {
+  background-color: #f4f4f4;
+}
+
+/* Task 2: Visibility and Display */
+.hidden {
+  visibility: hidden;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.none {
+  display: none;
+}
+
+.inline {
+  display: inline;
+  background: yellow;
+  padding: 5px;
+}
+
+.block {
+  display: block;
+  background: lightblue;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* Task 3: Smooth Scroll */
+nav {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: #0056b3;
+}
+
+/* Task 4: Padding & Margin */
+.box {
+  background: lightcoral;
+  padding: 20px;
+  margin: 30px auto;
+  width: 50%;
+  border: 2px solid darkred;
+}
+
+/* Task 5: Multiple Background Images */
+.background-images {
+  height: 200px;
+  background: url("assets/learnCSS.png") no-repeat top left,
+    url("assets/images.png") no-repeat bottom right;
+  background-size: 200px, 200px;
+  margin: 20px auto;
+  padding: 20px;
+}
